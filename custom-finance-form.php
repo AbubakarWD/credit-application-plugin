@@ -4,6 +4,7 @@ Plugin Name: Credit Application Plugin
 Description: A custom plugin that provides the credit application form for WordPress.
 Version: 1.0
 Author: Abubakar
+License: GPL-2.0-or-later
 */
 
 if (!defined('ABSPATH')) {
