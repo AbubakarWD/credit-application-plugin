@@ -1,0 +1,251 @@
+  *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --dark: #111111;
+            --red: #e8192c;
+            --red-dark: #cc2839;
+            --red-light: #fdf2f1;
+            --charcoal: #1a1a1a;
+            --charcoal2: #2c2c2c;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray-mid: #e8e8e8;
+            --gray-text: #555555;
+            --gray-label: #888888;
+            --border: #d8d8d8;
+            --radius: 6px;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--gray-light);
+            color: var(--charcoal);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        /* ── MAIN LAYOUT ── */
+        .page-wrap {
+            max-width: 860px;
+            margin: 2.5rem auto 4rem;
+            padding: 0 1.25rem;
+        }
+
+        /* ── FORM CARD ── */
+        .form-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: var(--red);
+            color: var(--white);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-header h2 {
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin: auto;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* ── GRID ── */
+        .g2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .g3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .g4 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .mt {
+            margin-top: 1rem;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        /* ── FIELDS ── */
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-size: 11.5px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--gray-label);
+        }
+
+        .req {
+            color: var(--red);
+            margin-left: 2px;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        input[type=number],
+        input[type=date],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 13px;
+            border: 1.5px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            color: var(--charcoal);
+            background: var(--white);
+            transition: border-color 0.18s, box-shadow 0.18s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #bbb;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+            line-height: 1.6;
+        }
+
+        /* ── RADIO / CHECKBOX ── */
+        .radio-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2px;
+        }
+
+        .radio-opt {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: var(--charcoal);
+            cursor: pointer;
+        }
+
+        .radio-opt input {
+            width: auto;
+            accent-color: var(--red);
+            cursor: pointer;
+        }
+
+        .submit-area {
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 10px 18px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 4px 14px rgba(192, 57, 43, 0.35);
+        }
+
+        .btn-submit:hover {
+            background: var(--red-dark) !important;
+        }
+
+        .btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 640px) {
+
+            .g2,
+            .g3,
+            .g4 {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .card-body {
+                padding: 1.25rem 1rem;
+            }
+
+            .btn-submit {
+                padding: 14px 32px;
+                font-size: 14px;
+            }
+        }
