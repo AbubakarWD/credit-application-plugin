@@ -1,5 +1,4 @@
 # Credit Application Plugin
-
 A custom plugin that provides the credit application form for WordPress.
 
 ## Features
@@ -7,14 +6,6 @@ A custom plugin that provides the credit application form for WordPress.
 - WordPress plugin architecture
 - Easy deployment and updates
 - Can be embedded on pages via shortcode or plugin output
-
-## Installation
-1. Upload the plugin folder to `/wp-content/plugins/`.
-2. Activate the plugin from the WordPress admin panel.
-3. Add the form to the desired page.
-
-## Usage
-Configure the plugin settings (if applicable) and place the form on your target page.
 
 # Usage
 1. Download or clone the plugin into your WordPress installation.
